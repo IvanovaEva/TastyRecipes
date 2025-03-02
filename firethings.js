@@ -65,7 +65,7 @@ if (window.location.pathname === '/Proektna/login.html' || window.location.pathn
 
 }
 
-if (window.location.pathname === '/Proektna/loggedPage.html') {
+if (window.location.pathname === '/Proektna/loggedPage.html' || window.location.pathname === '/TastyRecipes/loggedPage.html') {
     const userEmail = localStorage.getItem('userEmail');
     if (userEmail) {
         document.getElementById('user-email-login').textContent = userEmail;
