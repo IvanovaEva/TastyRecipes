@@ -727,7 +727,7 @@ setTimeout(() => {
         }
     })
 // Favourites page
-    if (window.location.pathname === '/Proektna/favourites.html') {
+    if (window.location.pathname === '/Proektna/favourites.html' || window.location.pathname === '/TastyRecipes/favourites.html') {
         var allFavs = '';
         if (window.favourites)
             allFavs = window.recipes.filter(recipe => favourites[0]['recipe-ids'].includes(recipe.id));
