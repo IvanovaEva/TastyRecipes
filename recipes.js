@@ -771,12 +771,12 @@ setTimeout(() => {
         }
     }
 // Search button
-    const searchButton = document.getElementById('search-navigation');
-
-    searchButton.addEventListener('click', function () {
-        const searchContainer = document.getElementById('search-container');
-        searchContainer.classList.toggle('active');
-    });
+//     const searchButton = document.getElementById('search-navigation');
+//
+//     searchButton.addEventListener('click', function () {
+//         const searchContainer = document.getElementById('search-container');
+//         searchContainer.classList.toggle('active');
+//     });
 
 
     // console.log(window.favourites)

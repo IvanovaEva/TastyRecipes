@@ -48,6 +48,7 @@ if (window.location.pathname === '/Proektna/login.html' || window.location.pathn
     googleLogin.addEventListener('click', function (event) {
         signInWithPopup(auth, provider)
             .then((result) => {
+                console.log(1)
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const user = result.user;
                 localStorage.setItem('userEmail', user.email);
@@ -160,6 +161,10 @@ window.zacrveniGo = zacrveniGo;
 //         });
 //     });
 // }
+
+
+
+
 
 
 
