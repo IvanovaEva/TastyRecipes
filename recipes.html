@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--    Linking SwiperJs CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/1.jpg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="ingredients.html">INGREDIENTS</a></li>
+                <li><a href="favourites.html">FAVOURITES</a></li>
+                <li><a href="">MY RECIPES</a></li>
+                <li><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
+                <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+
+<div id="recipesAll">
+    <div id="recipesAllContainer">
+        <div id="recipesFirstPage">
+            <div class="recipeCategories">
+                <div class="categoriesImg">
+                    <img src="images/recipes%20breakfast%20image.jpg">
+                    <h3 class="categoriesTextOver">BREAKFAST</h3>
+                </div>
+                <div class="categoriesImg">
+                    <img src="images/recipesDinnerImage.jpg">
+                    <h3 class="categoriesTextOver">LUNCH</h3>
+                </div>
+                <div class="categoriesImg">
+                    <img src="images/recipesLunchImage.jpg">
+                    <h3 class="categoriesTextOver">DINNER</h3>
+                </div>
+                <div class="categoriesImg">
+                    <img src="images/recipesDessertImage.jpg">
+                    <h3 class="categoriesTextOver">DESSERT</h3>
+                </div>
+
+            </div>
+            <div class="line-text">
+                <div class="line-heading">BROWSE</div>
+            </div>
+            <div id="recipesContainer"></div>
+            <div class="more-recipes-div">
+                <button class="btn-more-recipes">LOAD MORE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="newContent" style="display: none;">
+
+</div>
+<div id="goToTopBtn">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>
+
+<!---------JavaScript for Toggle Menu--------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+        navLinks.style.display = "block";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+        setTimeout(function () {
+            navLinks.style.display = "none";
+        }, 1000)
+    }
+</script>
+<script type="module">
+    import { zacrveniGo } from './firethings.js';
+    window.zacrveniGo = zacrveniGo; // Make it globally accessible
+</script>
+<script type="module" src="firethings.js"></script>
+<script src="recipes.js"></script>
+<!-- Linking SwiperJS script-->
+<script src="script.js"></script>
+
+</body>
+</html>

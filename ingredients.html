@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Linking SwiperJs CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/1.jpg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="ingredients.html">INGREDIENTS</a></li>
+                <li><a href="favourites.html">FAVOURITES</a></li>
+                <li><a href="">MY RECIPES</a></li>
+                <li><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
+                <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<div id="recipesAll">
+    <div class="recipe-container">
+        <div id="ingredientHeader">
+            <img src="images/ingredients-background.jpg">
+            <div class="overlay-text-ing">
+                <h1>INGREDIENTS</h1>
+                <p>Choose the main ingredient in your meal</p>
+            </div>
+        </div>
+        <div id="gallery-container">
+            <div class="ingredient-gallery">
+                <div class="ingredient-item">
+                    <img src="images/chicken-ingredients.webp">
+                    <p>Chicken</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/pasta-ingredients.webp">
+                    <p>Pasta</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/pork-ingredients.png">
+                    <p>Pork</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/rice-ingre.jpg">
+                    <p>Rice</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/beef-ingredients.jpg">
+                    <p>Beef</p>
+                </div>
+            </div>
+            <div class="ingredient-gallery">
+                <div class="ingredient-item">
+                    <img src="images/flour-ingredients.webp">
+                    <p>Flour</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/vegetables-ingredients.jpg" alt="Chicken">
+                    <p>Vegetables</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/eggs-ingredients.jpg" alt="Beef">
+                    <p>Eggs</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/fruits-ingredients.webp" alt="Pork">
+                    <p>Fruits</p>
+                </div>
+                <div class="ingredient-item">
+                    <img src="images/chocolate.jpg">
+                    <p>Chocolate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="newContent" style="display: none;">
+
+</div>
+<div id="goToTopBtn">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>
+
+</body>
+<script type="module" src="firethings.js"></script>
+<script src="recipes.js"></script>
+<script src="script.js"></script>
+
+</html>

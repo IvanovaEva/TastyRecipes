@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Linking SwiperJs CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/1.jpg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="recipes.html">RECIPES</a></li>
+                <li><a href="ingredients.html">INGREDIENTS</a></li>
+                <li><a href="favourites.html">FAVOURITES</a></li>
+                <li><a href="">MY RECIPES</a></li>
+                <li id="search-navigation"><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
+                <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div id="search-container"><input type="text" placeholder="Search text..."></div>
+</section>
+<div id="recipesAll">
+    <div id="index-container">
+        <div id="index-categories-container">
+            <div class="line-text">
+                <div class="line-heading" onclick="f()">POPULAR</div>
+            </div>
+            <section class="cards">
+                <div class="container swiper">
+                    <div class="card-wrapper card-wrapper1">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe12.jpg" class="card-image" />
+                                    <h2 class="card-title">Skinny Banana Chocolate Chip Muffins</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe5.jpg" class="card-image" />
+                                    <h2 class="card-title">The Best Ever Cheeseburger</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe19.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Garlic Rosemary Beef Tenderloin</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe22.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Coconut Curry Chicken</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe9.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Easiest Lasagna Ever</h2>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination swiper-pagination1 "></div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev swiper-button-prev1"></div>
+                <div class="swiper-button-next swiper-button-next1"></div>
+            </section>
+
+            <section class="categ">
+                <div class="categories">
+                    <div class="sliki">
+                        <div class="ikonka">
+                            <img src="images/breakfast_white.png" width="90px" height="90px"/>
+                            <p class="ime">BREAKFAST</p>
+                        </div>
+                        <div class="ikonka">
+                            <img src="images/lunch14.png" width="90px" height="90px"/>
+                            <p class="ime">LUNCH</p>
+                        </div>
+                        <div class="ikonka">
+                            <img src="images/dinner2.png" width="90px" height="90px"/>
+                            <p class="ime">DINNER</p>
+                        </div>
+                        <div class="ikonka">
+                            <img src="images/dessert10.png" width="70px" height="90px"/>
+                            <p class="ime">DESSERT</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="line-text">
+                <div class="line-heading">CHEF'S CHOICE</div>
+            </div>
+            <section class="cards">
+                <div class="container swiper">
+                    <div class="card-wrapper card-wrapper2">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe14.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Instant Pot Pho</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe21.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Steak and Veggies</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe43.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Creamy Mushroom Pasta</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe54.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Freezer Breakfast Burritos</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe23.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Chocolate Sour Cream Cake</h2>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination swiper-pagination2"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev2 swiper-button-prev"></div>
+                <div class="swiper-button-next2 swiper-button-next"></div>
+            </section>
+
+            <div class="line-text">
+                <div class="line-heading">30 MINUTE RECIPES</div>
+            </div>
+            <section class="cards">
+                <div class="container swiper">
+                    <div class="card-wrapper card-wrapper3">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe2.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Baked Tacos</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/56.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Nutella Stuffed Cinnamon Sugar Muffins</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe16.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Instant Pot Ground Beef and Pasta</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe47.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Corned Beef Hash</h2>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="images/recipe33.jpg" class="card-image" width="500px"/>
+                                    <h2 class="card-title">Slow Cooker Pork Ragu</h2>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination swiper-pagination3"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev3 swiper-button-prev"></div>
+                <div class="swiper-button-next3 swiper-button-next"></div>
+            </section>
+        </div>
+    </div>
+</div>
+<div id="newContent"></div>
+<div id="goToTopBtn">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>
+
+
+<!---------JavaScript for Toggle Menu--------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+        navLinks.style.display = "block";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+        setTimeout(function () {
+            navLinks.style.display = "none";
+        }, 1000)
+    }
+</script>
+
+<script type="module" src="firethings.js"></script>
+<!-- Add this script tag to your HTML -->
+<!--<script>-->
+<!--    const firebaseScript = document.createElement('script');-->
+<!--    firebaseScript.src = 'path/to/firebase.js'; // Replace with the correct path-->
+<!--    firebaseScript.onload = () => {-->
+<!--        console.log('Firebase loaded');-->
+<!--        if (window.location.pathname.endsWith('recipes.html')) {-->
+<!--            renderRecipes();-->
+<!--        }-->
+<!--    };-->
+<!--    document.head.appendChild(firebaseScript);-->
+<!--</script>-->
+
+<!-- Linking SwiperJS script-->
+<script src="recipes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
