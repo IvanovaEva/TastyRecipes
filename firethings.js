@@ -165,7 +165,12 @@ window.zacrveniGo = zacrveniGo;
 
 
 
+/*
+git add .
+git commit -m "Your commit message herej"
+git push origin main
 
+ */
 
 
 
