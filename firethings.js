@@ -43,6 +43,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 const auth = getAuth();
 const provider = new GoogleAuthProvider(auth);
+console.log(window.location.pathname)
 if (window.location.pathname === '/Proektna/login.html' || window.location.pathname === '/Proektna/register.html' || window.location.pathname === '/TastyRecipes/register.html' || window.location.pathname === '/TastyRecipes/login.html') {
     const googleLogin = document.getElementById('google-login');
     googleLogin.addEventListener('click', function (event) {
