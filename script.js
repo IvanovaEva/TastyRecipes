@@ -97,16 +97,14 @@ function logInWithEmail() {
     document.getElementById('login-data-div').style.display = "none";
     document.querySelector('#login-form h1').innerHTML += ' with Email'
     var container = document.getElementById('login-data-new');
-    container.innerHTML += '<div class="login-input-div" id="login-email-div"><div>Email Address</div><input placeholder="yourname@example.com" type="text" id="login-email"></div><div class="login-input-div" id="login-password-div"><div>Password</div><input type="password" id="login-password" placeholder="password"></div><p id="log-in-button"> Log in</p>'
+    container.innerHTML += '<div class="login-input-div" id="login-email-div"><div>Email Address</div><input placeholder="yourname@example.com" type="text" id="login-email"></div><div class="login-input-div" id="login-password-div"><div>Password</div><input type="password" id="login-password" placeholder="password"></div><p id="log-in-button" class="register-login-btn" onclick="signIn()"> Log in</p>'
 }
 function registerWithEmail() {
     document.getElementById('login-data-div').style.display = "none";
     document.querySelector('#login-form h1').innerHTML += ' with Email'
     var container = document.getElementById('login-data-new');
-    container.innerHTML += '<div class="login-input-div" id="login-email-div"><div>Email Address</div><input placeholder="yourname@example.com" type="text" id="login-email"></div><div class="login-input-div" id="login-password-div"><div>Password</div><input type="password" id="login-password" placeholder="password"></div><p id="register-button">Sign up</p>'
+    container.innerHTML += '<div class="login-input-div" id="login-email-div"><div>Email Address</div><input placeholder="yourname@example.com" type="text" id="login-email"></div><div class="login-input-div" id="login-password-div"><div>Password</div><input type="password" id="login-password" placeholder="password"></div><p id="register-button" class="register-login-btn" onclick="signUp()">Sign up</p>'
 }
-
-
 var loginNav = document.getElementById('login-navigation')
 loginNav.addEventListener('click', function () {
     var emailOfTheUser = localStorage.getItem('userEmail')

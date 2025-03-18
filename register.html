@@ -6,13 +6,13 @@
     <title>Tasty Recipes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--    Linking SwiperJs CSS-->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
 <section class="header">
     <nav>
-        <a href="index.html"><img src="images/1.jpg"></a>
+        <a href="index.html"><img src="images/TR.jpg"></a>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -20,7 +20,7 @@
                 <li><a href="recipes.html">RECIPES</a></li>
                 <li><a href="ingredients.html">INGREDIENTS</a></li>
                 <li><a href="favourites.html">FAVOURITES</a></li>
-                <li><a href="">MY RECIPES</a></li>
+                <li><a href="myRecipes.html">MY RECIPES</a></li>
                 <li id="search-navigation"><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
                 <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
             </ul>
@@ -34,11 +34,7 @@
         <p id="login-paragraph">to save your favourite recipes and add your own.</p>
         <div id="email-login" class="login-divs" onclick="registerWithEmail()"><i class="fa fa-envelope-o" aria-hidden="true"></i>Sign up with Email
         </div>
-        <div id="google-login" class="login-divs"><i class="fa fa-google" aria-hidden="true"></i>Sign up with Google
-        </div>
-        <div id="facebook-login" class="login-divs"><i class="fa fa-facebook-official" aria-hidden="true"></i>Sign up
-            with Facebook
-        </div>
+        <div id="google-login" class="login-divs"><i class="fa fa-google" aria-hidden="true"></i>Sign up with Google</div>
     </div>
     <div id="login-data-new"></div>
     <p>Have an account? <span onclick="goToLogin()">Log in</span></p>
@@ -47,15 +43,26 @@
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </div>
 
-<!---------JavaScript for Toggle Menu--------->
+<div class="footer">
+    <a href="index.html"><img src="images/TR2.jpg"></a>
+    <div class="footer-links">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="recipes.html">RECIPES</a></li>
+            <li><a href="ingredients.html">INGREDIENTS</a></li>
+            <li><a href="favourites.html">FAVOURITES</a></li>
+            <li><a href="myRecipes.html">MY RECIPES</a></li>
+        </ul>
+    </div>
+</div>
+
+<!---------JavaScript--------->
 <script>
     var navLinks = document.getElementById("navLinks");
-
     function showMenu() {
         navLinks.style.right = "0";
         navLinks.style.display = "block";
     }
-
     function hideMenu() {
         navLinks.style.right = "-200px";
         setTimeout(function () {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tasty Recipes</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -21,22 +22,46 @@
         <li><a href="ingredients.html">INGREDIENTS</a></li>
         <li><a href="favourites.html">FAVOURITES</a></li>
         <li><a href="myRecipes.html">MY RECIPES</a></li>
-        <li><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
+        <li id="search-navigation"><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
         <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
       </ul>
     </div>
     <i class="fa fa-bars" onclick="showMenu()"></i>
   </nav>
+  <div id="search-container"><input type="text" placeholder="Search text..."></div>
 </section>
-<div id="login-form">
-  <h1>Log in</h1>
-  <div id="login-data-div">
-    <p id="login-paragraph">to save your favourite recipes and add your own.</p>
-    <div id="email-login" class="login-divs" onclick="logInWithEmail()"><i class="fa fa-envelope-o" aria-hidden="true"></i>Log in with Email</div>
-    <div id="google-login" class="login-divs"><i class="fa fa-google" aria-hidden="true"></i>Log in with Google</div>
+<div id="recipesAll">
+  <div id="goBackButton">
+    <i class="fa fa-chevron-left" aria-hidden="true"></i>
   </div>
-  <div id="login-data-new"></div>
-  <p>Don't have an account? <span onclick="goToRegister()">Join now</span></p>
+  <div id="myRecipeAddNew">
+    <form onsubmit="addNewRecipe(event, this)">
+      <h1>Add New Recipe</h1>
+      <label for="my-title">Title</label> <input type="text" id="my-title" placeholder="Enter Recipe Title" required>
+
+      <label for="my-time">Time</label> <input type="text" id="my-time" placeholder="Enter Recipe Time" required>
+
+      <label for="recipe-category">Category</label>
+      <select name="recipe-category" id="recipe-category" required>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+      </select>
+
+      <label for="ingredientsList">Ingredients</label>
+      <div id="ingredients-container">
+        <input type="text" id="ingredientsList" name="ingredients[]" placeholder="Enter an ingredient" required>
+      </div>
+      <button type="button" id="add-ingredient-button">Add Ingredient</button>
+
+      <label for="directions">Directions</label>
+      <textarea name="directions" id="directions" cols="30" rows="5" placeholder="Enter directions for the recipe" required></textarea>
+
+      <br><br>
+      <button type="submit">Create Recipe</button>
+    </form>
+  </div>
 </div>
 <div id="goToTopBtn">
   <i class="fa fa-chevron-up" aria-hidden="true"></i>
@@ -55,6 +80,7 @@
   </div>
 </div>
 
+
 <!---------JavaScript--------->
 <script>
   var navLinks = document.getElementById("navLinks");
@@ -69,9 +95,10 @@
     }, 1000)
   }
 </script>
+
 <script type="module" src="firethings.js"></script>
 <script src="recipes.js"></script>
-<!-- Linking SwiperJS script-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>

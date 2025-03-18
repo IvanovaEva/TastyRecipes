@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasty Recipes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -21,19 +22,28 @@
                 <li><a href="ingredients.html">INGREDIENTS</a></li>
                 <li><a href="favourites.html">FAVOURITES</a></li>
                 <li><a href="myRecipes.html">MY RECIPES</a></li>
-                <li><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
+                <li id="search-navigation"><i class="fa fa-search navIcons" aria-hidden="true"></i></li>
                 <li id="login-navigation"><i class="fa fa-user-circle navIcons" aria-hidden="true"></i></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
+    <div id="search-container"><input type="text" placeholder="Search text..."></div>
 </section>
-<div id="login-form">
-    <p id="succ">You have successfully logged in with</p>
-    <h2 id="user-email-login"></h2>
-    <div id="logout-page-button">Log out</div>
-    <p id="back"><a href="index.html">Home page</a></p>
+<div id="recipesAll">
+    <div id="myRecipesAll">
+        <h1>My Recipes <span id="myRecipesBtn"><button onclick="function addRecipeNew() {
+            if(JSON.parse(localStorage.getItem('userProfile'))?.uid)
+                window.location.href = './myRecipesAddNew.html'
+            else
+                window.location.href = './login.html'
+        }
+        addRecipeNew()">Add recipe</button></span></h1>
+        <div id="myRecipesCards"></div>
+        <div id="myRecipesStatus" class="go-login-my-recipes"></div>
+    </div>
 </div>
+<div id="newContent"></div>
 <div id="goToTopBtn">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </div>
@@ -50,13 +60,17 @@
         </ul>
     </div>
 </div>
+
+
 <!---------JavaScript--------->
 <script>
     var navLinks = document.getElementById("navLinks");
+
     function showMenu() {
         navLinks.style.right = "0";
         navLinks.style.display = "block";
     }
+
     function hideMenu() {
         navLinks.style.right = "-200px";
         setTimeout(function () {
@@ -64,9 +78,10 @@
         }, 1000)
     }
 </script>
+
 <script type="module" src="firethings.js"></script>
 <script src="recipes.js"></script>
-<!-- Linking SwiperJS script-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>
